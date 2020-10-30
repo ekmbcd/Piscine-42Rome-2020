@@ -1,0 +1,5 @@
+Credentials cache: API:3059E582-03B7-49EA-8C6F-6E1F048AB443
+        Principal: ade-feli@42ROMA.IT
+
+  Issued                Expires               Principal
+Oct 19 17:18:27 2020  Oct 20 03:18:01 2020  krbtgt/42ROMA.IT@42ROMA.IT
