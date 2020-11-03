@@ -103,7 +103,7 @@ int		main(int argc, char **argv)
 	gen_rec(very_big_pp[0], 0, 0, max);
 	generate_borders(very_big_pp[0], max, ft_factorial(max));
 	if (recursive(very_big_pp, 0, max) != 0)
-		print_matrix(very_big_pp[0], max);
+		print_matrix(very_big_pp[2], max);
 	else
 		error();
 	tana_libera_tutti(very_big_pp, max);
