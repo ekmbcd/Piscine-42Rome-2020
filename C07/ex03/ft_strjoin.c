@@ -31,7 +31,7 @@ void	concatenate(char *dest, char *src)
 	destlen = len(dest);
 	while (src[i] != '\0')
 	{
-		dest[destlen + i] = src[i];
+		dest[i + destlen] = src[i];
 		i++;
 	}
 	dest[destlen + i] = '\0';
@@ -53,13 +53,14 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	while (i > 0)
 		totalsize += len(strs[i-- - 1]);
-	res = (char *)malloc(totalsize + (len(sep) * (size - 1)) + 1);
+	if (!(res = (char *)malloc(totalsize + (len(sep) * (size - 1)) + 1)))
+		return (res);
+	*res = '\0';
 	while (i < size)
 	{
 		concatenate(res, strs[i]);
-		if (i != size - 1)
+		if (i++ != size - 1)
 			concatenate(res, sep);
-		i++;
 	}
 	res[totalsize + (len(sep) * (size - 1))] = 0;
 	return (res);

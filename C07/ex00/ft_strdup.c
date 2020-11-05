@@ -27,8 +27,8 @@ void	strcopy(char *a, char *b)
 
 char	*ft_strdup(char *src)
 {
-	int i;
-	char *dest;
+	int		i;
+	char	*dest;
 
 	i = 0;
 	while (src[i])
@@ -38,13 +38,4 @@ char	*ft_strdup(char *src)
 	dest = (char *)malloc(i + 1);
 	strcopy(dest, src);
 	return (dest);
-}
-#include <stdio.h>
-int main()
-{
-	char *a;
-	char *b = "pippo";
-	
-	a = ft_strdup( b);
-	printf("%s", a);
 }

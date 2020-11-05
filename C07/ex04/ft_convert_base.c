@@ -25,8 +25,8 @@ int		check_base(char *base)
 		return (0);
 	while (base[i])
 	{
-		if (base[i] == '+' || base[i] == '-'
-			|| base[i] == ' ' || base[i] <= 31)
+		if (base[i] == '+' || base[i] == '-' || base[i] == ' ' ||
+		(base[i] <= 31 && base[i] > 0) || base[i] == 127)
 			return (0);
 		k = 1;
 		while (base[i + k])
@@ -89,7 +89,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	if (!(check_base(base_from) && check_base(base_to)))
 		return (0);
 	i = 0;
-	if (res = (char *)malloc(sizeof(char) * 34) == 0)
+	if (!(res = (char *)malloc(sizeof(char) * 34)))
 		return (0);
 	n = ft_atoi_base(nbr, base_from);
 	ft_itoa_base(n, base_to, res, &i);
