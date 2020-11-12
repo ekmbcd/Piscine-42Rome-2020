@@ -10,23 +10,46 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+unsigned int	ft_strlength(char *str)
+{
+	char			*ptr;
+	unsigned int	index;
+
+	ptr = str;
+	index = 0;
+	while (*ptr != 0)
+	{
+		index++;
+		ptr++;
+	}
+	return (index);
+}
+
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int i;
-	unsigned int len;
+	unsigned int	index;
+	unsigned int	dlength;
+	char			*dest2;
+	char			*src2;
 
-	i = 0;
-	len = 0;
-	while (dest[len] != '\0')
-		len++;
-	while (src[i] != '\0' && len + i + 1 < size)
+	dest2 = dest;
+	src2 = src;
+	index = size;
+	while (index-- != 0 && *dest2 != '\0')
+		dest2++;
+	dlength = dest2 - dest;
+	index = size - dlength;
+	if (index == 0)
+		return (dlength + ft_strlength(src2));
+	while (*src2)
 	{
-		dest[len + i] = src[i];
-		i++;
+		if (index != 1)
+		{
+			*dest2++ = *src2;
+			index--;
+		}
+		src2++;
 	}
-	dest[len + i] = '\0';
-	i = 0;
-	while (src[i])
-		i++;
-	return (i + len);
+	*dest2 = '\0';
+	return (dlength + (src2 - src));
 }
