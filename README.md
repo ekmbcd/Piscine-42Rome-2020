@@ -1,5 +1,4 @@
 # Piscine - 42 Rome - 2020
-October-November piscine
 
 All of my work done during the Ecole 42 Piscine in Rome, November 2020.
 
