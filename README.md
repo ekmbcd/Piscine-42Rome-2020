@@ -18,7 +18,7 @@ All of my work done during the Ecole 42 Piscine in Rome, November 2020.
 - C09 : 100%
 
 - R00 : 0% (forgot to add a prototype, doesn't compile)
-- R01 : 0% (a few errors, almost works for all N-size squares) 
+- R01 : 0% (a few errors, almost works for all N-sized squares) 
 - R02 : 80% (makefile relinks)
 
 - BSQ : 100%
