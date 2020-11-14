@@ -25,3 +25,4 @@ All of my work done during the Ecole 42 Piscine in Rome, November 2020.
 - Exam 00 : 100%
 - Exam 01 : 80%
 - Exam 02 : 100%
+- Final Exam : 90%
