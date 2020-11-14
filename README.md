@@ -1,6 +1,6 @@
 # Piscine - 42 Rome - 2020
 
-All of my work done during the Ecole 42 Piscine in Rome, November 2020.
+All of my work done during the School 42 Piscine in Rome, November 2020.
 
 - S00 : 100%
 - S01 : 100%
